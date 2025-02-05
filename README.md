@@ -23,7 +23,7 @@ A basic minesweeper implementation built using C++ and Qt
    make
    ```
 
-3. **Run the game**
-   \On Mac: run the created **main.app**
-   \On Windows: run the created **main.exe**
-   \On Linux: run the executable using **./main**
+3. **Run the game**\
+   On _Mac_ : run the created **main.app**\
+   On _Windows_ : run the created **main.exe**\
+   On _Linux_ : run the executable using **./main**
