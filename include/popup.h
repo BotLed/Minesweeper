@@ -12,7 +12,7 @@ class Popup: public QDialog {
 public:
     explicit Popup(QWidget *parent = nullptr, const QString &message = "DEFAULT: A message was not passed");
     ~Popup();
-    void setMessage(const QString &newMessage);
+    void setMessage(const QString &newMessage); // Passes whatever message should be displayed to the popup
 
 private:
     QString message;

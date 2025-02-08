@@ -25,6 +25,10 @@ Popup::Popup(QWidget *parent, const QString &message) : QDialog(parent)
 
 Popup::~Popup(){}
 
+/* setMessage: sets the message on the popup to whatever newMessage is
+* Params: QString newMessage -> the message to set to
+* Returns: void
+*/
 void Popup::setMessage(const QString &newMessage)
 {
     message = newMessage;
