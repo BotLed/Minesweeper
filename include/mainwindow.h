@@ -6,6 +6,7 @@
 #include <QGridLayout>
 #include <QRandomGenerator>
 #include <QApplication>
+#include <QSignalBlocker>
 #include <vector>
 #include <stack>
 #include <unordered_set>
@@ -34,6 +35,7 @@ private:
     int cols; // numbers of columns on the board
     int remainingTiles;
 
+    // Vectors were used for memory safety
     std::vector<int> visitedArray;
     std::vector<QRightClickButton*> nodesArray;
 
@@ -43,21 +45,18 @@ private:
        
 
 private slots:
-    // QRightClickButton signal members
-    void onButtonClicked(int index);
-    void onButtonRClicked(int index);
 
-    // Popup signal members
+    std::vector<int> generateMines(int, int);
+    bool checkIfMine(int);
+
     void onExitGame();
     void onResetGame();
 
-    // MainWindow members
-    bool checkIfMine(int);
-    std::vector<int> generateMines(int, int);
     void triggerPopup(bool popupCase);
     std::vector<int> checkAdjacent(int index);
 
+    void onButtonClicked(int index);
+    void onButtonRClicked(int index);
 };
 
-#endif // MAINWINDOW_H
-
+#endif
